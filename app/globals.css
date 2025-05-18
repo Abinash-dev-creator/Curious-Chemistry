@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+.grid-cols-18 {
+  grid-template-columns: repeat(18, minmax(60px, 1fr));
+}
+
+.element {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-size: 0.9rem;
+  position: relative;
+  padding: 4px;
+}
+
+.element:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.element-symbol {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.element-number {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-size: 0.7rem;
+}
+
+.element-name {
+  font-size: 0.7rem;
+  text-align: center;
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+/* Element category colors */
+.alkali-metal {
+  background-color: #ff8a8a;
+}
+.alkaline-earth {
+  background-color: #ffd280;
+}
+.transition-metal {
+  background-color: #ffff80;
+}
+.post-transition {
+  background-color: #ccff99;
+}
+.metalloid {
+  background-color: #99ffcc;
+}
+.nonmetal {
+  background-color: #99ccff;
+}
+.noble-gas {
+  background-color: #cc99ff;
+}
+.lanthanide {
+  background-color: #ffb3e6;
+}
+.actinide {
+  background-color: #ff99cc;
+}
+.lanthanide-label,
+.actinide-label {
+  background-color: #f0f0f0;
+  font-size: 0.8rem;
+  cursor: default;
+}
